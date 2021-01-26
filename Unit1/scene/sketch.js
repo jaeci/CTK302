@@ -29,6 +29,24 @@ function draw() {
 
   ellipse(width/2, 400, 800, 100);
 
+
+  fill(209, 218, 232)
+  ellipse(373, 106, 5, 5);
+  ellipse(355, 229, 5, 5);
+  ellipse(260, 176, 5, 5);
+  ellipse(660, 49, 5, 5);
+  ellipse(610, 223, 5, 5);
+  ellipse(452, 18, 5, 5);
+  ellipse(163, 29, 5, 5);
+  ellipse(68, 286, 5, 5);
+  ellipse(704, 302, 5, 5);
+  ellipse(459, 220, 5, 5);
+  ellipse(330, 244, 5, 5);
+  ellipse(438, 56, 5, 5);
+  ellipse(678, 85, 5, 5);
+  ellipse(30, 188, 5, 5);
+  ellipse(52, 277, 5, 5);
+
   fill(255, 241, 171)
   ellipse(274, 67, 100, 100);
 
