@@ -171,3 +171,4 @@ function draw() {
     ellipse(249, 570, 13, 13);
     ellipse(210, 570, 13, 13);
   }
+}
