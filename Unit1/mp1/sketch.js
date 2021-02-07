@@ -31,9 +31,9 @@ function draw() {
   ellipse(88, 156, 144, 55);
   //leaves tree 2
   ellipse(411, 274, 170, 55);
-  ellipse(448, 124, 170, 55);
-  ellipse(612, 150, 170, 55);
-  ellipse(546, 81, 170, 55);
+  ellipse(448, 124, 190, 60);
+  ellipse(612, 150, 170, 70);
+  ellipse(546, 81, 150, 55);
 
   //baby fox
   //body
@@ -67,20 +67,48 @@ function draw() {
     ellipse(300, 430, 15, 15);
     ellipse(347, 432, 15, 15);
     fill('white');
-    ellipse(299,427,5,5);
-    ellipse(304,430,3,3);
-    ellipse(348,429,5,5);
-    ellipse(343,432,3,3);
-    //flower
+    ellipse(299, 427, 5, 5);
+    ellipse(304, 430, 3, 3);
+    ellipse(348, 429, 5, 5);
+    ellipse(343, 432, 3, 3);
+    //stems
+    fill(74, 138, 63);
+    triangle(166, 320, 184, 517, 169, 508);
+    triangle(368, 306, 405, 590, 425, 587);
+    triangle(432, 207, 438, 538, 451, 540);
+    triangle(250, 600, 215, 150, 263, 585)
+    //big flowers
     fill(224, 119, 137);
-    ellipse(191,141,60,60);
-    ellipse(174,100,60,60);
-    ellipse(211,74,60,60);
-    ellipse(256,103, 60,60);
-    ellipse(240,144,60,60);
+    ellipse(191, 141, 60, 60);
+    ellipse(174, 100, 60, 60);
+    ellipse(211, 74, 60, 60);
+    ellipse(256, 103, 60, 60);
+    ellipse(240, 144, 60, 60);
+
+    ellipse(430, 141, 60, 60);
+    ellipse(451, 169, 60, 60);
+    ellipse(422, 195, 60, 60);
+    ellipse(386, 188, 60, 60);
+    ellipse(381, 158, 60, 60);
+
+    ellipse(145, 244, 60, 60);
+    ellipse(189, 260, 60, 60);
+    ellipse(183, 298, 60, 60);
+    ellipse(141, 313, 60, 60);
+    ellipse(112, 282, 60, 60);
+
+    ellipse(352, 232, 60, 60);
+    ellipse(331, 261, 60, 60);
+    ellipse(346, 291, 60, 60);
+    ellipse(384, 281, 60, 60);
+    ellipse(391, 252, 60, 60);
+
     //flower center
     fill('white')
-    ellipse(212,111,40,40);
+    ellipse(212, 111, 35, 35);
+    ellipse(153, 277, 35, 35);
+    ellipse(358, 259, 30, 30);
+    ellipse(411, 164, 30, 30);
 
   } else {
 
@@ -101,18 +129,30 @@ function draw() {
     ellipse(185, 572, 20, 20);
     ellipse(190, 559, 20, 20);
 
-
     ellipse(267, 615, 20, 20);
     ellipse(258, 621, 20, 20);
     ellipse(264, 632, 20, 20);
     ellipse(277, 628, 20, 20);
     ellipse(280, 619, 20, 20);
 
+    ellipse(436, 569, 20, 20);
+    ellipse(449, 572, 20, 20);
+    ellipse(448, 587, 20, 20);
+    ellipse(435, 589, 20, 20);
+    ellipse(430, 577, 20, 20);
+
+    ellipse(382, 605, 20, 20);
+    ellipse(394, 612, 20, 20);
+    ellipse(383, 625, 20, 20);
+    ellipse(369, 624, 20, 20);
+    ellipse(365, 612, 20, 20);
 
     //flower centers
     fill('white')
     ellipse(177, 565, 10, 10);
     ellipse(268, 622, 10, 10);
+    ellipse(378, 614, 10, 10);
+    ellipse(441, 579, 10, 10);
 
     //tears
     fill(140, 209, 230)
@@ -131,11 +171,3 @@ function draw() {
     ellipse(249, 570, 13, 13);
     ellipse(210, 570, 13, 13);
   }
-
-
-  text(mouseX + ", " + mouseY, 30, 30);
-}
-
-function mouseReleased() {
-  print(mouseX + ", " + mouseY);
-}
