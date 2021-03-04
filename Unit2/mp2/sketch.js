@@ -83,18 +83,6 @@ function draw() {
 
 }
 
-
-
-// function mouseReleased() {
-//   state++;
-//   if (state > 2) state = 0;
-// }
-
-//
-// function mouseReleased() {
-//   print(mouseX + ", " + mouseY);
-// }
-
-
-
-// }
+function touchStarted(){
+  getAudioContext().resume();
+}
