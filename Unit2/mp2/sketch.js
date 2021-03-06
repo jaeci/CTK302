@@ -38,7 +38,6 @@ function draw() {
       }
 
       //Image: fox is curled up with their eyes closed, no tears, no flowers
-      //I want this volume level to go to the next case to be pretty low, like snapping your fingers
 
       break;
 
@@ -63,8 +62,7 @@ function draw() {
 
       //Image: fox with some tears
       //There is some mic input, that's the "forest noises" There are a few tears from the fox
-      //I want this volume level to go to the next case to be moderately loud but not too much, maybe like talking slightly above a normal volume
-      //This state may be skipped over if the volume level is really loud, but that's okay
+      //This state may be skipped over if the volume level is loud, but that's okay
 
       break;
 
@@ -85,10 +83,8 @@ function draw() {
         timer = 0;
       }
 
-      //Image:Fox with LOTS of tears
-      //Louder mic input, MORE tears from the fox, so it's like the louder it gets, the more scared they are
-      //Here I'd like -maybe a message at the bottom of the screen like "pet the fox to let them know it'll be okay" and turn the fox into a button and when you click it goes to case 3
-      //!!!!! I'd like cases 1 and 2 to be persistent even after the volume input is back to 0, so if you clap your hands really loud, it'll go to case 2 and stay there UNTIL you click the button
+      //Image:Fox with LOTS of tears, very scared
+      //I've turned the fox into a button and when you "pet" by hovering over them, it goes to case 3
 
       break;
     case 3:
@@ -100,7 +96,7 @@ function draw() {
       }
 
       //Image:Fox with one eye open and small flower buds around them
-      //This is directly after you press the "button" and it's like the fox realizing that there's nothing to be scared of
+      //This ONLY activates after the button is interacted with
 
       break;
     case 4:
