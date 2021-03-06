@@ -29,7 +29,7 @@ function draw() {
 
   switch (state) {
     case 0:
-      image(Original, width / 2, height / 2, 900, 1200);
+      image(Original, width / 2, height / 2, 600, 800);
       if (vol > .03) {
         state = 1;
       }
@@ -43,12 +43,20 @@ function draw() {
       break;
 
     case 1:
-      image(Tears1, width / 2, height / 2, 900, 1200);
-      timer = timer + 1;
-      if (timer > 300) {
+      image(Tears1, width / 2, height / 2, 600, 800);
+
+      // if (vol > 1.0) {
+      //   state = 2;
+      // }
+
+      timer++;
+
+      if (timer > 200) {
         timer = 0;
         state = 0;
-      if (vol > 1) {
+      }
+
+      if (vol > 1.0) {
         state = 2;
       }
 
@@ -61,11 +69,18 @@ function draw() {
       break;
 
     case 2:
-      image(Tears2, width / 2, height / 2, 900, 1200);
-      text("pet the fox to calm them", width/2, 1300);
-      if ((mouseX > 299) && (mouseX < 627) && (mouseY > 1004) && (mouseY < 1108)) {
-        state = 3;
+      image(Tears2, width / 2, height / 2, 600, 800);
+
+      timer++;
+
+      if (timer > 200) {
+        timer = 0;
+        state = 0;
       }
+      // text("pet the fox to calm them", width/2, 1300);
+      // if ((mouseX > 299) && (mouseX < 627) && (mouseY > 1004) && (mouseY < 1108)) {
+      //   state = 3;
+      // }
 
       //Image:Fox with LOTS of tears
       //Louder mic input, MORE tears from the fox, so it's like the louder it gets, the more scared they are
@@ -74,7 +89,7 @@ function draw() {
 
       break;
     case 3:
-      image(Flowers1, width / 2, height / 2, 900, 1200);
+      image(Flowers1, width / 2, height / 2, 600, 800);
       timer = timer + 1;
       if (timer > 300) {
         timer = 0;
@@ -86,7 +101,7 @@ function draw() {
 
       break;
     case 4:
-      image(Flowers2, width / 2, height / 2, 900, 1200);
+      image(Flowers2, width / 2, height / 2, 600, 800);
       timer = timer + 1;
       if (timer > 400) {
         timer = 0;
@@ -102,6 +117,6 @@ function draw() {
 
 }
 
-function touchStarted(){
+function touchStarted() {
   getAudioContext().resume();
 }
