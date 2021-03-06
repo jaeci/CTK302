@@ -6,11 +6,11 @@ var vol;
 function setup() {
   createCanvas(900, 1200);
 
-  Original = loadImage("assets/original.png")
-  Tears1 = loadImage("assets/tears1.png")
-  Tears2 = loadImage("assets/tears2.png")
-  Flowers1 = loadImage("assets/flowers1.png")
-  Flowers2 = loadImage("assets/flowers2.png")
+  Original = loadImage("assets/original.jpg")
+  Tears1 = loadImage("assets/tears1.jpg")
+  Tears2 = loadImage("assets/tears2.jpg")
+  Flowers1 = loadImage("assets/flowers1.jpg")
+  Flowers2 = loadImage("assets/flowers2.jpg")
 
   imageMode(CENTER);
   rectMode(CENTER);
