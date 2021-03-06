@@ -30,7 +30,7 @@ function draw() {
   switch (state) {
     case 0:
       image(Original, width / 2, height / 2, 600, 800);
-      if (vol > .03) {
+      if (vol > .3) {
         state = 1;
       }
       if (vol > .8) {
@@ -79,10 +79,10 @@ function draw() {
       }
 
       fill('white');
-      text("pet the fox to calm them", width/2 + 30, 780);
-      if ((mouseX > 214 ) && (mouseX < 409) && (mouseY > 665) && (mouseY < 753)) {
+      text("pet the fox to calm them", width / 2 + 30, 780);
+      if ((mouseX > 214) && (mouseX < 409) && (mouseY > 665) && (mouseY < 753)) {
         state = 3;
-        timer=0;
+        timer = 0;
       }
 
       //Image:Fox with LOTS of tears
@@ -94,7 +94,7 @@ function draw() {
     case 3:
       image(Flowers1, width / 2, height / 2, 600, 800);
       timer = timer + 1;
-      if (timer > 300) {
+      if (timer > 200) {
         timer = 0;
         state = 4;
       }
