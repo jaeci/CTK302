@@ -4,7 +4,7 @@ var mic;
 var vol;
 
 function setup() {
-  createCanvas(900, 1200);
+  createCanvas(600, 800);
 
   Original = loadImage("assets/original.jpg")
   Tears1 = loadImage("assets/tears1.jpg")
@@ -33,7 +33,7 @@ function draw() {
       if (vol > .03) {
         state = 1;
       }
-      if (vol > 1.0) {
+      if (vol > .8) {
         state = 2;
       }
 
@@ -56,7 +56,7 @@ function draw() {
         state = 0;
       }
 
-      if (vol > 1.0) {
+      if (vol > .8) {
         state = 2;
       }
 
@@ -73,14 +73,17 @@ function draw() {
 
       timer++;
 
-      if (timer > 200) {
+      if (timer > 350) {
         timer = 0;
         state = 0;
       }
-      // text("pet the fox to calm them", width/2, 1300);
-      // if ((mouseX > 299) && (mouseX < 627) && (mouseY > 1004) && (mouseY < 1108)) {
-      //   state = 3;
-      // }
+
+      fill('white');
+      text("pet the fox to calm them", width/2 + 30, 780);
+      if ((mouseX > 214 ) && (mouseX < 409) && (mouseY > 665) && (mouseY < 753)) {
+        state = 3;
+        timer=0;
+      }
 
       //Image:Fox with LOTS of tears
       //Louder mic input, MORE tears from the fox, so it's like the louder it gets, the more scared they are
@@ -119,4 +122,8 @@ function draw() {
 
 function touchStarted() {
   getAudioContext().resume();
+}
+
+function mouseReleased() {
+  print(mouseX + ", " + mouseY);
 }
