@@ -1,10 +1,10 @@
 var mic;
 var vol;
 var c = 'green';
-let x = 0;
+let x = -400;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
 
   // code for initializing mic in.
   mic = new p5.AudioIn(); // what does "new" mean?
@@ -26,7 +26,7 @@ function draw() {
 
     x = x + 5;
     if (x > width) {
-      x = -100;
+      x = -400;
     }
   }
 
@@ -43,8 +43,9 @@ function draw() {
 }
 
 function avatar() {
-  
+
   //baby fox
+  noStroke();
   //body
   fill(222, 130, 31);
   quad(308, 460, 348, 461, 384, 585, 286, 591);
