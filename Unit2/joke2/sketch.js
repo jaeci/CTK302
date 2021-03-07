@@ -12,11 +12,11 @@ function draw() {
   switch (state) {
     case 0:
       background('purple');
-      text("Why did the chicken\ncross the road?", width / 2, height / 2, 400, 400);
+      text("Why do bicycles\nfall over?", width / 2, height / 2, 400, 400);
       break;
     case 1:
       background('blue');
-      text("to get to the other side", width / 2, height / 2, 400, 400)
+      text("Because they're two tired", width / 2, height / 2, 400, 400)
       break;
 
   }
