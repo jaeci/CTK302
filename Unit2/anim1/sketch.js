@@ -7,7 +7,7 @@ function setup() {
 function draw() {
   background(100);
   //rect(x, 100, 100, 100);
-  text("good morning" x, height/2)
+  text("good morning", x, height/2)
   x = x + 1
   //x++; is the same as x=x+1
   // x += 10 is x=x+10
