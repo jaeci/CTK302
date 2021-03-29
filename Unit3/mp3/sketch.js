@@ -7,11 +7,12 @@ let state = 0;
 let song;
 let beep;
 
-function preload(){
+function preload() {
   song = loadSound("assets/berrysong.m4a");
   beep = loadSound("assets/beep.m4a");
 
 }
+
 function setup() {
   createCanvas(600, 800);
   imageMode(CENTER);
@@ -23,7 +24,7 @@ function setup() {
   Lose = loadImage("assets/lose.png")
   Basket = loadImage("assets/basket.png")
   Berry1 = loadImage("assets/berry1.png")
-  Berry2 = loadImage("assets/berry2.png")
+  // Berry2 = loadImage("assets/berry2.png")
 
   song.play();
   song.loop();
