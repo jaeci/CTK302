@@ -4,12 +4,18 @@ let maxTimer = 12 * 60;
 let timer = 0;
 let frogPos;
 let state = 0;
+let song;
+let beep;
 
+function preload(){
+  song = loadSound("assets/berrysong.m4a");
+  beep = loadSound("assets/beep.m4a");
 
-
+}
 function setup() {
   createCanvas(600, 800);
   imageMode(CENTER);
+
 
   Home = loadImage("assets/home.png")
   Play = loadImage("assets/play.png")
@@ -18,6 +24,9 @@ function setup() {
   Basket = loadImage("assets/basket.png")
   Berry1 = loadImage("assets/berry1.png")
   Berry2 = loadImage("assets/berry2.png")
+
+  song.play();
+  song.loop();
 
   // Spawn an object
 
@@ -34,6 +43,7 @@ function draw() {
   switch (state) {
     case 0:
       image(Home, width / 2, height / 2, 600, 800);
+
 
       break;
     case 1:
@@ -96,6 +106,7 @@ function game() {
 
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
+      beep.play();
     }
 
   }
@@ -139,12 +150,9 @@ class Car {
   // methods
 
   display() {
-    let berries = Berry1,
-      Berry2;
-    // let berries = random(berries);
-    image(berries, this.pos.x, this.pos.y, 50, 50);
-    // image(Berry1, this.pos.x, this.pos.y, 50, 50);
-    // image(Berry2, this.pos.x, this.pos.y, 50, 50);
+
+    image(Berry1, this.pos.x, this.pos.y, 50, 50);
+
 
   }
 
@@ -157,4 +165,8 @@ class Car {
 
   }
 
+}
+
+function touchStarted() {
+  getAudioContext().resume();
 }
