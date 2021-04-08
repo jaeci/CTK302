@@ -14,7 +14,7 @@ function setup() {
 
 
 
-  bunnyImage = loadImage("assets/berry.png");
+  bunnyImage = loadImage("assets/moobloom.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
 
