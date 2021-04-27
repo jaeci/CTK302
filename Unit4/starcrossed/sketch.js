@@ -207,7 +207,7 @@ function game() {
 
   for (var i = 0; i < cars2.length; i++){
     cars2[i].display();
-    cars2[i].move();
+    cars2[i].drive();
     if (cars2[i].pos.dist(frogPos) < 50){
       cars2.splice(i,1)
       beep.play();
@@ -216,7 +216,7 @@ function game() {
 
     for (var i = 0; i < cars.length; i++){
       cars[i].display();
-      cars[i].move();
+      cars[i].drive();
       if (cars[i].pos.dist(frogPos) < 50){
         state = 0;
       }
