@@ -99,7 +99,6 @@ function draw() {
       game();
       timer++;
       if (timer > maxTimer) {
-        timer = 0;
         state = 0;
         resetGame();
       }
@@ -186,7 +185,7 @@ function game() {
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   //Copy of the next lines in case I mess them up
   xPosition = map(gamma, -18, 18, 0, width);
-  yPosition = map(beta, 25, 45, 0, height);
+  yPosition = map(beta, -25, 25, 0, height);
 
 
   // move the frog around the screen
@@ -228,7 +227,7 @@ function game() {
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 50) {
+    if (cars[i].pos.dist(frogPos) < 30) {
       cars.splice(i, 1);
       //LOSE
       state = 0;
@@ -239,7 +238,7 @@ function game() {
   for (var i = 0; i < cars2.length; i++) {
     cars2[i].display();
     cars2[i].drive();
-    if (cars2[i].pos.dist(frogPos) < 50) {
+    if (cars2[i].pos.dist(frogPos) < 30) {
       cars2.splice(i, 1);
       //WIN - MAYBE ADD A SCORE COUNTER?
       beep.play();
