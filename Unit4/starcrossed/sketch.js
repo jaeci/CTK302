@@ -183,9 +183,9 @@ function game() {
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
-  //Copy of the next lines in case I mess them up
+
   xPosition = map(gamma, -18, 18, 0, width);
-  yPosition = map(beta, -25, 25, 0, height);
+  yPosition = map(beta, 25, 45, 0, height);
 
 
   // move the frog around the screen
@@ -257,7 +257,7 @@ function game() {
   // Just a bunch of text commands to display data coming in from addEventListeners
   // textAlign(LEFT);
   // textSize(20);
-  // fill('black');
+  // fill('white');
   // text("orientation data:", 25, 25);
   // textSize(15);
   // text("alpha: " + alpha, 25, 50);
@@ -308,7 +308,7 @@ function Car() {
     //PLACEHOLDER
     // fill('red');
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    image(Meteor, this.pos.x, this.pos.y, 100, 100);
+    image(Meteor, this.pos.x, this.pos.y, 70, 70);
 
   }
 
@@ -338,7 +338,7 @@ function Car2() {
     //PLACEHOLDER
     // fill('blue');
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    image(Sparkle, this.pos.x, this.pos.y, 100, 100);
+    image(Sparkle, this.pos.x, this.pos.y, 70, 70);
 
 
   }
