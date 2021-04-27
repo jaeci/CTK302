@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, width / 2, height / 2);
+      image(Home, width / 2, height / 2, 400, 600);
       //HOME IMG HERE
       break;
 
@@ -122,7 +122,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(Howto, width / 2, height / 2);
+      image(Howto, width / 2, height / 2, 400, 600);
       // text("HOW TO", 250, 250);
       break;
   }
@@ -175,6 +175,9 @@ function game() {
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
+  //Copy of the next lines in case I mess them up
+  // xPosition = map(gamma, -18, 18, 0, width);
+  // yPosition = map(beta, 25, 45, 0, height);
   xPosition = map(gamma, -18, 18, 0, width);
   yPosition = map(beta, 25, 45, 0, height);
 
@@ -220,10 +223,10 @@ function game() {
 
 
   //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
-  // if (frogPos.x > width) frogPos.x = 0;
-  // if (frogPos.x < 0) frogPos.x = width;
-  // if (frogPos.y > height) frogPos.y = 0;
-  // if (frogPos.y < 0) frogPos.y = height;
+  if (frogPos.x > width) frogPos.x = 0;
+  if (frogPos.x < 0) frogPos.x = width;
+  if (frogPos.y > height) frogPos.y = 0;
+  if (frogPos.y < 0) frogPos.y = height;
 
 
   // Debugging information -- take this out when you're ready for production!
