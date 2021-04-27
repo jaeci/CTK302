@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, width/2, height/2);
+      image(Home, width / 2, height / 2);
       //HOME IMG HERE
       break;
 
@@ -104,7 +104,7 @@ function draw() {
         resetGame();
       }
       break;
-//I have this set up so I can add win and lose screens later
+      //I have this set up so I can add win and lose screens later
       //WIN
     case 2:
       space();
@@ -122,7 +122,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(Howto, width/2, height/2);
+      image(Howto, width / 2, height / 2);
       // text("HOW TO", 250, 250);
       break;
   }
@@ -133,11 +133,11 @@ function mouseReleased() {
   switch (state) {
     case 0:
       //START BUTTON
-      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height/2 + 45) && (mouseY < height/2 + 145)) {
+      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 45) && (mouseY < height / 2 + 145)) {
         state = 1;
       }
       //HOW TO BUTTON
-      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 +100) && (mouseY > height/2 + 180 ) && (mouseY < height/2 + 280)) {
+      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 180) && (mouseY < height / 2 + 280)) {
         state = 4;
       }
       break;
@@ -154,7 +154,7 @@ function mouseReleased() {
       //HOW TO
     case 4:
       //BACK BUTTON
-      if ((mouseX > width / 2 - 280) && (mouseX < width / 2 - 105) && (mouseY > height/2 -385) && (mouseY < height/2 - 340)) {
+      if ((mouseX > width / 2 - 280) && (mouseX < width / 2 - 105) && (mouseY > height / 2 - 385) && (mouseY < height / 2 - 340)) {
         state = 0;
       }
       break;
@@ -171,7 +171,7 @@ function resetGame() {
 }
 
 function game() {
-//GRYO
+  //GRYO
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
@@ -196,34 +196,34 @@ function game() {
   frogPos.y = yPosition;
 
   // iterate through the car loop to move them and see if we need to delete cars
-//METEOR COLLISION
+  //METEOR COLLISION
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
       //LOSE
-      state = 3;
+      state = 0;
     }
   }
 
-//STAR COLLECT
+  //STAR COLLECT
   for (var i = 0; i < cars.length; i++) {
     cars2[i].display();
     cars2[i].drive();
     if (cars2[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
       //WIN - MAYBE ADD A SCORE COUNTER?
-      state = 3;
+      beep.play();
     }
   }
 
 
-//PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
-    if (frogPos.x > width) frogPos.x = 0;
-    if (frogPos.x < 0) frogPos.x = width;
-    if (frogPos.y > height) frogPos.y = 0;
-    if (frogPos.y < 0) frogPos.y = height;
+  //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
+  if (frogPos.x > width) frogPos.x = 0;
+  if (frogPos.x < 0) frogPos.x = width;
+  if (frogPos.y > height) frogPos.y = 0;
+  if (frogPos.y < 0) frogPos.y = height;
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -246,7 +246,7 @@ function game() {
 
 }
 
-//MAKE THIS SPAWN MORE SPARKLES?
+//MAKE THIS SPAWN MORE SPARKLES
 function deviceShaken() {
   // re-spawn cars
   cars2 = []; // clear the array first
@@ -254,28 +254,6 @@ function deviceShaken() {
     cars2.push(new Car2());
   }
 }
-
-
-// HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
-
-// Read in accelerometer data
-window.addEventListener('deviceorientation', function(e) {
-  alpha = e.alpha;
-  beta = e.beta;
-  gamma = e.gamma;
-});
-
-
-// accelerometer Data
-window.addEventListener('devicemotion', function(e) {
-  // get accelerometer values
-  x = e.acceleration.x;
-  y = e.acceleration.y;
-  z = e.acceleration.z;
-});
-
-
-
 
 
 function space() {
@@ -286,8 +264,8 @@ function space() {
   for (let i = 0; i < stars.length; i++) {
     stars[i].display();
     stars[i].move();
-    if (stars[i].a <=0){
-      stars.splice(i,1);
+    if (stars[i].a <= 0) {
+      stars.splice(i, 1);
     }
   }
 
@@ -309,7 +287,7 @@ function Car() {
     //PLACEHOLDER
     // fill('red');
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-  image(Meteor, this.pos.x, this.pos.y, 100, 100);
+    image(Meteor, this.pos.x, this.pos.y, 100, 100);
 
   }
 
@@ -385,14 +363,29 @@ class Star {
 
 
   }
-
-
-
 }
 
+// HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
+
+// Read in accelerometer data
+window.addEventListener('deviceorientation', function(e) {
+  alpha = e.alpha;
+  beta = e.beta;
+  gamma = e.gamma;
+});
+
+
+// accelerometer Data
+window.addEventListener('devicemotion', function(e) {
+  // get accelerometer values
+  x = e.acceleration.x;
+  y = e.acceleration.y;
+  z = e.acceleration.z;
+});
+
 //SOUND
-// function touchStarted() {
-//   getAudioContext().resume();
-// }
+function touchStarted() {
+  getAudioContext().resume();
+}
 
 // COLOR PALETTE HEX: Dark blue #0C1121 --- Light Blue #57ABCF --- Pink #CF57A1
