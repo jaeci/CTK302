@@ -178,8 +178,8 @@ function game() {
   //Copy of the next lines in case I mess them up
   // xPosition = map(gamma, -18, 18, 0, width);
   // yPosition = map(beta, 25, 45, 0, height);
-  xPosition = map(gamma, 1, 1, 0, width);
-  yPosition = map(beta, 1, 1, 0, height);
+  xPosition = map(gamma, -1, 1, 0, width);
+  yPosition = map(beta, -1, 1, 0, height);
 
 
   // move the frog around the screen
