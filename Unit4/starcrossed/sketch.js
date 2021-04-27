@@ -205,46 +205,46 @@ function game() {
   frogPos.x = xPosition;
   frogPos.y = yPosition;
 
-  for (var i = 0; i < cars2.length; i++){
-    cars2[i].display();
-    cars2[i].drive();
-    if (cars2[i].pos.dist(frogPos) < 50){
-      cars2.splice(i,1)
-      beep.play();
-    }
-  }
-
-    for (var i = 0; i < cars.length; i++){
-      cars[i].display();
-      cars[i].drive();
-      if (cars[i].pos.dist(frogPos) < 50){
-        state = 0;
-      }
-    }
+  // for (var i = 0; i < cars2.length; i++){
+  //   cars2[i].display();
+  //   cars2[i].drive();
+  //   if (cars2[i].pos.dist(frogPos) < 50){
+  //     cars2.splice(i,1)
+  //     beep.play();
+  //   }
+  // }
+  //
+  //   for (var i = 0; i < cars.length; i++){
+  //     cars[i].display();
+  //     cars[i].drive();
+  //     if (cars[i].pos.dist(frogPos) < 50){
+  //       state = 0;
+  //     }
+  //   }
 
 
     //I think this section is incorrect - keeping it for a little bit just in case
   // //METEOR COLLISION
-  // for (var i = 0; i < cars.length; i++) {
-  //   cars[i].display();
-  //   cars[i].drive();
-  //   if (cars[i].pos.dist(frogPos) < 50) {
-  //     cars.splice(i, 1);
-  //     //LOSE
-  //     state = 0;
-  //   }
-  // }
-  //
+  for (var i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].drive();
+    if (cars[i].pos.dist(frogPos) < 50) {
+      cars.splice(i, 1);
+      //LOSE
+      state = 0;
+    }
+  }
+
   // //STAR COLLECT
-  // for (var i = 0; i < cars.length; i++) {
-  //   cars2[i].display();
-  //   cars2[i].drive();
-  //   if (cars2[i].pos.dist(frogPos) < 50) {
-  //     cars.splice(i, 1);
-  //     //WIN - MAYBE ADD A SCORE COUNTER?
-  //     beep.play();
-  //   }
-  // }
+  for (var i = 0; i < cars2.length; i++) {
+    cars2[i].display();
+    cars2[i].drive();
+    if (cars2[i].pos.dist(frogPos) < 50) {
+      cars2.splice(i, 1);
+      //WIN - MAYBE ADD A SCORE COUNTER?
+      beep.play();
+    }
+  }
 
 
   //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
