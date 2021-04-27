@@ -26,7 +26,7 @@ var beep;
 //Other
 var state = 0;
 var timer = 0;
-var maxTimer = 20 * 60;
+var maxTimer = 15 * 60;
 
 
 //SOUND
@@ -134,6 +134,7 @@ function mouseReleased() {
     case 0:
       //START BUTTON
       if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 45) && (mouseY < height / 2 + 145)) {
+        resetGame();
         state = 1;
       }
       //HOW TO BUTTON
@@ -154,7 +155,7 @@ function mouseReleased() {
       //HOW TO
     case 4:
       //BACK BUTTON
-      if ((mouseX > width / 2 - 280) && (mouseX < width / 2 - 105) && (mouseY > height / 2 - 385) && (mouseY < height / 2 - 340)) {
+      if ((mouseX > width / 2 - 280) && (mouseX < width / 2 - 105) && (mouseY > 0) && (mouseY < height / 2 - 260)) {
         state = 0;
       }
       break;
@@ -166,7 +167,7 @@ function resetGame() {
   timer = 0;
   cars = [];
   cars2 = [];
-  frogPos = createVector(width / 2, height - 200);
+  frogPos = createVector(width / 2, height / 2);
 
 }
 
