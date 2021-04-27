@@ -57,7 +57,7 @@ class Bubble {
     this.main = myMain;
     this.side = mySide;
     this.pos = createVector(random(width), random(height));
-    this.vel = random(1,4);
+    this.vel = random(1, 4);
   }
 
 
@@ -68,15 +68,15 @@ class Bubble {
     //   ellipse(this.pos.x, this.pos.y, 50, 50);
     // }
     ellipse(this.pos.x, this.pos.y, 80, 80);
-    text(this.name, this.pos.x, this.pos.y-15);
-        text(this.main, this.pos.x, this.pos.y);
-            text(this.side, this.pos.x, this.pos.y+15);
+    text(this.name, this.pos.x, this.pos.y - 15);
+    text(this.main, this.pos.x, this.pos.y);
+    text(this.side, this.pos.x, this.pos.y + 15);
 
   }
 
-drive(){
-  this.pos.x += this.vel;
-  if (this.pos.x>width) this.pos.x=0;
-}
+  drive() {
+    this.pos.x += this.vel;
+    if (this.pos.x > width) this.pos.x = 0;
+  }
 
 }
