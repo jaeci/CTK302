@@ -85,7 +85,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(home, width/2, height/2, 600, 800);
+      image(home, width/2, height/2, 500, 700);
       //HOME IMG HERE
       break;
 
@@ -113,7 +113,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(howto, width/2, height/2, 600, 800);
+      image(howto, width/2, height/2, 500, 700);
       // text("HOW TO", 250, 250);
       break;
   }
