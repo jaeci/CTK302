@@ -62,7 +62,7 @@ function setup() {
   }
 
   // initialize the frog's position
-  frogPos = createVector(width / 2, height - 200);
+  frogPos = createVector(width / 2, height / 2);
 
   //PLAY SONG
   song.play();
@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, width / 2, height / 2, 400, 600);
+      image(Home, width / 2, height / 2, 390, 570);
       //HOME IMG HERE
       break;
 
@@ -122,7 +122,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(Howto, width / 2, height / 2, 400, 600);
+      image(Howto, width / 2, height / 2, 390, 570);
       // text("HOW TO", 250, 250);
       break;
   }
@@ -178,7 +178,7 @@ function game() {
   //Copy of the next lines in case I mess them up
   // xPosition = map(gamma, -18, 18, 0, width);
   // yPosition = map(beta, 25, 45, 0, height);
-  xPosition = map(gamma, -1, 1, 0, width);
+  xPosition = map(gamma, 1, 1, 0, width);
   yPosition = map(beta, 1, 1, 0, height);
 
 
