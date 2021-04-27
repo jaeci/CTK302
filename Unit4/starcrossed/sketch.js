@@ -104,7 +104,7 @@ function draw() {
         resetGame();
       }
       break;
-      //I have this set up so I can add win and lose screens later
+      //I have this set up so I can add win and lose screens later - They aren't active right now, the player will never see cases 2 and 3
       //WIN
     case 2:
       space();
@@ -133,12 +133,11 @@ function mouseReleased() {
   switch (state) {
     case 0:
       //START BUTTON
-      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 45) && (mouseY < height / 2 + 145)) {
-        resetGame();
+      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 45) && (mouseY < height / 2 + 140)) {
         state = 1;
       }
       //HOW TO BUTTON
-      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 180) && (mouseY < height / 2 + 280)) {
+      if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 150) && (mouseY < height / 2 + 250)) {
         state = 4;
       }
       break;
@@ -155,7 +154,7 @@ function mouseReleased() {
       //HOW TO
     case 4:
       //BACK BUTTON
-      if ((mouseX > width / 2 - 280) && (mouseX < width / 2 - 105) && (mouseY > 0) && (mouseY < height / 2 - 260)) {
+      if ((mouseX > 0) && (mouseX < 250) && (mouseY > 0) && (mouseY < 250)) {
         state = 0;
       }
       break;
@@ -167,6 +166,15 @@ function resetGame() {
   timer = 0;
   cars = [];
   cars2 = [];
+
+  for (var i = 0; i < maxCars; i++) {
+    cars.push(new Car());
+  }
+
+  for (var i = 0; i < maxCars2; i++) {
+    cars2.push(new Car2());
+  }
+
   frogPos = createVector(width / 2, height / 2);
 
 }
@@ -177,10 +185,8 @@ function game() {
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   //Copy of the next lines in case I mess them up
-  // xPosition = map(gamma, -18, 18, 0, width);
-  // yPosition = map(beta, 25, 45, 0, height);
-  xPosition = map(gamma, -1, 1, 0, width);
-  yPosition = map(beta, -1, 1, 0, height);
+  xPosition = map(gamma, -18, 18, 0, width);
+  yPosition = map(beta, 25, 45, 0, height);
 
 
   // move the frog around the screen
@@ -199,28 +205,46 @@ function game() {
   frogPos.x = xPosition;
   frogPos.y = yPosition;
 
-  // iterate through the car loop to move them and see if we need to delete cars
-  //METEOR COLLISION
-  for (var i = 0; i < cars.length; i++) {
-    cars[i].display();
-    cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 50) {
-      cars.splice(i, 1);
-      //LOSE
-      state = 0;
-    }
-  }
-
-  //STAR COLLECT
-  for (var i = 0; i < cars.length; i++) {
+  for (var i = 0; i < cars2.length; i++){
     cars2[i].display();
-    cars2[i].drive();
-    if (cars2[i].pos.dist(frogPos) < 50) {
-      cars.splice(i, 1);
-      //WIN - MAYBE ADD A SCORE COUNTER?
+    cars2[i].move();
+    if (cars2[i].pos.dist(frogPos) < 50){
+      cars2.splice(i,1)
       beep.play();
     }
   }
+
+    for (var i = 0; i < cars.length; i++){
+      cars[i].display();
+      cars[i].move();
+      if (cars[i].pos.dist(frogPos) < 50){
+        state = 0;
+      }
+    }
+
+
+    //I think this section is incorrect - keeping it for a little bit just in case
+  // //METEOR COLLISION
+  // for (var i = 0; i < cars.length; i++) {
+  //   cars[i].display();
+  //   cars[i].drive();
+  //   if (cars[i].pos.dist(frogPos) < 50) {
+  //     cars.splice(i, 1);
+  //     //LOSE
+  //     state = 0;
+  //   }
+  // }
+  //
+  // //STAR COLLECT
+  // for (var i = 0; i < cars.length; i++) {
+  //   cars2[i].display();
+  //   cars2[i].drive();
+  //   if (cars2[i].pos.dist(frogPos) < 50) {
+  //     cars.splice(i, 1);
+  //     //WIN - MAYBE ADD A SCORE COUNTER?
+  //     beep.play();
+  //   }
+  // }
 
 
   //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
