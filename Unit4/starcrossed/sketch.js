@@ -220,10 +220,10 @@ function game() {
 
 
   //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
-  if (frogPos.x > width) frogPos.x = 0;
-  if (frogPos.x < 0) frogPos.x = width;
-  if (frogPos.y > height) frogPos.y = 0;
-  if (frogPos.y < 0) frogPos.y = height;
+  // if (frogPos.x > width) frogPos.x = 0;
+  // if (frogPos.x < 0) frogPos.x = width;
+  // if (frogPos.y > height) frogPos.y = 0;
+  // if (frogPos.y < 0) frogPos.y = height;
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -242,11 +242,9 @@ function game() {
   // text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
   // text("y = " + y, 25, 170);
   // text("z = " + z, 25, 190);
-
-
 }
 
-//MAKE THIS SPAWN MORE SPARKLES
+//THIS SPAWNS MORE SPARKLES
 function deviceShaken() {
   // re-spawn cars
   cars2 = []; // clear the array first
@@ -254,7 +252,6 @@ function deviceShaken() {
     cars2.push(new Car2());
   }
 }
-
 
 function space() {
   noStroke();
@@ -268,10 +265,7 @@ function space() {
       stars.splice(i, 1);
     }
   }
-
-
 }
-
 
 // METEORS - BAD COLLECTOR
 function Car() {
