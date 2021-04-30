@@ -223,7 +223,7 @@ function game() {
 
 
     //I think this section is incorrect - keeping it for a little bit just in case
-  // //METEOR COLLISION
+  // //METEOR COLLISION - BAD
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
@@ -234,7 +234,7 @@ function game() {
     }
   }
 
-  // //STAR COLLECT
+  // //STAR COLLECT - GOOD
   for (var i = 0; i < cars2.length; i++) {
     cars2[i].display();
     cars2[i].drive();

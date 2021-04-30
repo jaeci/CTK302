@@ -1,4 +1,11 @@
 var bubbles = [];
+// IMAGES
+let poppyImage;
+let branchImage;
+let bridgetImage;
+let cloudImage;
+let cooperImage;
+let diamondImage;
 
 function setup() {
 
@@ -14,9 +21,16 @@ function setup() {
   Tabletop.init(settings); // Grab the data from the spreadsheet!
   // End Tabletop initialization stuff
 
+  //Images
+  Poppy = loadImage("assets/poppy.png");
+  Branch = loadImage("assets/branch.webp");
+  Bridget = loadImage("assets/bridget.webp");
+  Cloud = loadImage("assets/cloudguy.webp");
+  Cooper = loadImage("assets/cooper.webp");
+  Diamond = loadImage("assets/guydiamond.webp")
 
   // Regular setup code we usually have
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
@@ -33,12 +47,12 @@ function gotData(data) {
   for (let i = 0; i < data.length; i++) {
     bubbles.push(new Bubble(data[i].Name, data[i].Main, data[i].Side)); // THESE Name and Shape need to match your column names in your spreadsheet!
   }
-
+  
 }
 
 
 function draw() {
-  background(58, 122, 54);
+  background("#0da143");
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -62,15 +76,35 @@ class Bubble {
 
 
   display() {
-    // if (this.shape == "Square") {
-    //   image(cake, this.pos.x, this.pos.y)
-    // } else {
-    //   ellipse(this.pos.x, this.pos.y, 50, 50);
-    // }
-    ellipse(this.pos.x, this.pos.y, 80, 80);
-    text(this.name, this.pos.x, this.pos.y - 15);
-    text(this.main, this.pos.x, this.pos.y);
-    text(this.side, this.pos.x, this.pos.y + 15);
+    if (this.main == "Poppy") {
+      image(Poppy, this.pos.x, this.pos.y, 230, 230)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+    if (this.main == "Branch") {
+      image(Branch, this.pos.x, this.pos.y, 200, 200)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+    if (this.main == "Bridget") {
+      image(Bridget, this.pos.x, this.pos.y, 200, 200)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+    if (this.side == "That cloud guy") {
+      image(Cloud, this.pos.x + 200, this.pos.y, 200, 200)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+    if (this.side == "Cooper") {
+      image(Cooper, this.pos.x + 200, this.pos.y, 200, 200)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+    if (this.side == "Guy Diamond") {
+      image(Diamond, this.pos.x + 200, this.pos.y, 180, 230)
+      // text(this.name, this.pos.x, this.pos.y - 15);
+    }
+
+    // ellipse(this.pos.x, this.pos.y, 80, 80);
+    // text(this.name, this.pos.x, this.pos.y - 15);
+    // text(this.main, this.pos.x, this.pos.y);
+    // text(this.side, this.pos.x, this.pos.y + 15);
 
   }
 
