@@ -6,10 +6,11 @@ var windspeed = 0;
 var temp = 0;
 var pressure = 0;
 var desc;
+let f1;
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   // createCanvas(600, 800);
 
   // HERE is the call to get the weather.
@@ -24,6 +25,7 @@ function setup() {
 
   loadJSON(myBigString, gotData); // that gotData function happens when JSON comes back.
 
+  f1 = loadFont("assets/IndieFlowerRegular.ttf");
 }
 
 
@@ -50,8 +52,9 @@ function draw() {
       break;
 
     case 1:
-      background(200);
+      background("#88d4eb");
       fill('black');
+      textFont(f1);
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
       text("temperature is " + temp, 20, 60);
@@ -65,6 +68,8 @@ function draw() {
       ellipse(x + 10, 300, 200, 100);
       ellipse(x + 30, 240, 160, 140);
       ellipse(x - 50, 250, 120, 130);
+      ellipse(x - 90, 270, 120, 90);
+      ellipse(x + 80, 290, 120, 90);
 
 
       //thermometer
