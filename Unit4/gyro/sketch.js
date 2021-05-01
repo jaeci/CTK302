@@ -1,23 +1,19 @@
 /* For mobile phones - accesses accelerometer and gyroscope.
 Make sure you turn on orientation lock on your iPhone or Android device. */
 
-let alpha = 0,
-  beta = 0,
-  gamma = 0; // gyroscope variablers
-let bunnyImage;
+let alpha = 0, beta = 0 , gamma = 0; // gyroscope variables
+let x = 0.0, y = 0.0, z = 0.0 ; // accelerometer variables
+let mooImage;
 let xPosition = 0;
 let yPosition = 0;
-let x = 0,
-  y = 0,
-  z = 0; // accelerometer data
-let moobloomImage
+
 
 
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  Moobloom = loadImage("assets/moobloom.jpg");
+  mooImage = loadImage("assets/moobloom.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
 
@@ -25,7 +21,7 @@ function setup() {
 
 function draw() {
 
-  background('#608f61'); //medium muted green
+  background('#c6f5ff'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -39,7 +35,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  // image(Moobloom, 0, 0, 500, 500);
+  image(mooImage, 0, 0, 500, 500);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -60,12 +56,12 @@ function draw() {
   text("y = " + y.toFixed(2), 25, 170);
   text("z = " + z.toFixed(4), 25, 190);
 
-  Text that makes CTK type in the background
-  fill('blue');
+  // Text that makes CTK type in the background
+  fill('white');
   noStroke();
-  textSize(100);
+  textSize(300);
   textAlign(CENTER);
-  text("moobloom", width / 2, height / 2);
+  text("ctk", width / 2, height / 2);
 
 }
 
