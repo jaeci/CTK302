@@ -134,6 +134,7 @@ function mouseReleased() {
       //START BUTTON
       if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 45) && (mouseY < height / 2 + 140)) {
         state = 1;
+        resetGame();
       }
       //HOW TO BUTTON
       if ((mouseX > width / 2 - 100) && (mouseX < width / 2 + 100) && (mouseY > height / 2 + 150) && (mouseY < height / 2 + 250)) {
