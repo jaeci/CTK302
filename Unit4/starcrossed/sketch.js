@@ -39,8 +39,8 @@ function preload() {
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  imageMode(CENTER);
-  textAlign(CENTER);
+  // imageMode(CENTER);
+  // textAlign(CENTER);
 
   // initialize accelerometer variables
   alpha = 0;
@@ -248,10 +248,10 @@ function game() {
 
 
   //PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
-  if (frogPos.x > width) frogPos.x = 0;
-  if (frogPos.x < 0) frogPos.x = width;
-  if (frogPos.y > height) frogPos.y = 0;
-  if (frogPos.y < 0) frogPos.y = height;
+  // if (frogPos.x > width) frogPos.x = 0;
+  // if (frogPos.x < 0) frogPos.x = width;
+  // if (frogPos.y > height) frogPos.y = 0;
+  // if (frogPos.y < 0) frogPos.y = height;
 
 
   // Debugging information -- take this out when you're ready for production!
