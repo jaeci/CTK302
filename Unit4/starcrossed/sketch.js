@@ -66,7 +66,7 @@ function setup() {
 
   //PLAY SONG
   song.play();
-  // song.volume(0.2);
+  song.volume(0.2);
   song.loop();
 
   // LOAD IMAGES
@@ -247,7 +247,7 @@ function game() {
   }
 
 
-  PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
+  // PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
   if (frogPos.x > width) frogPos.x = 0;
   if (frogPos.x < 0) frogPos.x = width;
   if (frogPos.y > height) frogPos.y = 0;
