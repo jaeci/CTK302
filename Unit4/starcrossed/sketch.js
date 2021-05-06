@@ -39,7 +39,7 @@ function preload() {
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  // imageMode(CENTER);
+  imageMode(CENTER);
   textAlign(CENTER);
 
   // initialize accelerometer variables
