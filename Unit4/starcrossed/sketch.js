@@ -32,7 +32,6 @@ var maxTimer = 15 * 60;
 //SOUND
 function preload() {
   beep = loadSound("assets/beep.m4a");
-  volume(0.2);
   song = loadSound("assets/berrysong.m4a");
 
 }
@@ -66,6 +65,7 @@ function setup() {
   frogPos = createVector(width / 2, height / 2);
 
   //PLAY SONG
+  song.volume(0.2);
   song.play();
   song.loop();
 
