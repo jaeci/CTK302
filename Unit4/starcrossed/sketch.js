@@ -75,9 +75,9 @@ function setup() {
   Meteor = loadImage("assets/meteor2.png");
   Rocket = loadImage("assets/rocket2.png");
 
-  //Housekeeping
-  imageMode(CENTER);
-  rectMode(CENTER);
+  // //Housekeeping
+  // imageMode(CENTER);
+  // rectMode(CENTER);
 
 }
 
@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, width / 2, height / 2, 390, 570);
+      image(Home, wimdowWidth / 2, windowHeight / 2, 390, 570);
       //HOME IMG HERE
       break;
 
@@ -121,7 +121,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(Howto, width / 2, height / 2, 390, 570);
+      image(Howto, windowWidth / 2, windowHeight / 2, 390, 570);
       // text("HOW TO", 250, 250);
       break;
   }
@@ -247,10 +247,10 @@ function game() {
 
 
   // PAC-MAN LOOP CODE FOR FROG - MIGHT NEED
-  if (frogPos.x > width) frogPos.x = 0;
-  if (frogPos.x < 0) frogPos.x = width;
-  if (frogPos.y > height) frogPos.y = 0;
-  if (frogPos.y < 0) frogPos.y = height;
+  // if (frogPos.x > width) frogPos.x = 0;
+  // if (frogPos.x < 0) frogPos.x = width;
+  // if (frogPos.y > height) frogPos.y = 0;
+  // if (frogPos.y < 0) frogPos.y = height;
 
 
   // Debugging information -- take this out when you're ready for production!
