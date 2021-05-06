@@ -40,7 +40,7 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
   // imageMode(CENTER);
-  // textAlign(CENTER);
+  textAlign(CENTER);
 
   // initialize accelerometer variables
   alpha = 0;
