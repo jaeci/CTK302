@@ -184,8 +184,11 @@ function game() {
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
 
-  xPosition = map(gamma, 0, 25, 0, width);
+  xPosition = map(gamma, -18, 18, 0, width);
   yPosition = map(beta, 25, 45, 0, height);
+  //Change these?
+  // xPosition = map(gamma, 0, 25, 0, width);
+  // yPosition = map(beta, 25, 45, 0, height);
 
 
   // move the frog around the screen
