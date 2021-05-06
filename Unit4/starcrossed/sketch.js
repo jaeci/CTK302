@@ -31,8 +31,9 @@ var maxTimer = 15 * 60;
 
 //SOUND
 function preload() {
-  song = loadSound("assets/berrysong.m4a");
   beep = loadSound("assets/beep.m4a");
+  volume(0.2);
+  song = loadSound("assets/berrysong.m4a");
 
 }
 
@@ -71,9 +72,9 @@ function setup() {
   // LOAD IMAGES
   Home = loadImage("assets/home.png");
   Howto = loadImage("assets/howto.png");
-  Sparkle = loadImage("assets/sparkle.png");
-  Meteor = loadImage("assets/meteor.png");
-  Rocket = loadImage("assets/rocket.png");
+  Sparkle = loadImage("assets/sparkle2.png");
+  Meteor = loadImage("assets/meteor2.png");
+  Rocket = loadImage("assets/rocket2.png");
 
   //Housekeeping
   imageMode(CENTER);
@@ -196,7 +197,7 @@ function game() {
   // PLACEHOLDER
   // fill('green');
   // ellipse(0, 0, 80, 80);
-  image(Rocket, frogPos.x, frogPos.y, 100, 150);
+  image(Rocket, frogPos.x, frogPos.y, 30, 75);
   pop();
 
 
@@ -308,7 +309,7 @@ function Car() {
     //PLACEHOLDER
     // fill('red');
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    image(Meteor, this.pos.x, this.pos.y, 70, 70);
+    image(Meteor, this.pos.x, this.pos.y, 50, 50);
 
   }
 
@@ -338,7 +339,7 @@ function Car2() {
     //PLACEHOLDER
     // fill('blue');
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    image(Sparkle, this.pos.x, this.pos.y, 70, 70);
+    image(Sparkle, this.pos.x, this.pos.y, 30, 40);
 
 
   }
