@@ -39,8 +39,7 @@ function preload() {
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  // imageMode(CENTER);
-  // textAlign(CENTER);
+
 
   // initialize accelerometer variables
   alpha = 0;
@@ -77,8 +76,8 @@ function setup() {
   Rocket = loadImage("assets/rocket2.png");
 
   //Housekeeping
-  // imageMode(CENTER);
-  // rectMode(CENTER);
+  imageMode(CENTER);
+  rectMode(CENTER);
 
 }
 
