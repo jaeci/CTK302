@@ -66,7 +66,7 @@ function setup() {
 
   //PLAY SONG
   song.play();
-  song.volume(0.2);
+  // song.volume(0.2);
   song.loop();
 
   // LOAD IMAGES
