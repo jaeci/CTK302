@@ -77,8 +77,8 @@ function setup() {
   Rocket = loadImage("assets/rocket2.png");
 
   //Housekeeping
-  imageMode(CENTER);
-  rectMode(CENTER);
+  // imageMode(CENTER);
+  // rectMode(CENTER);
 
 }
 
