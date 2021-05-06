@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, windowWidth / 2, windowHeight / 2, 390, 570);
+      image(Home, wimdowWidth / 2, windowHeight / 2, 390, 570);
       //HOME IMG HERE
       break;
 
