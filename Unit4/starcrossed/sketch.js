@@ -39,8 +39,8 @@ function preload() {
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  imageMode(CENTER);
-  textAlign(CENTER);
+  // imageMode(CENTER);
+  // textAlign(CENTER);
 
   // initialize accelerometer variables
   alpha = 0;
@@ -66,7 +66,7 @@ function setup() {
 
   //PLAY SONG
   song.play();
-  song.volume(0.2);
+  // song.volume(0.2);
   song.loop();
 
   // LOAD IMAGES
