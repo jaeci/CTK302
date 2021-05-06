@@ -65,7 +65,7 @@ function setup() {
   frogPos = createVector(width / 2, height / 2);
 
   //PLAY SONG
-  song.volume(0.2);
+  // song.volume(0.2);
   song.play();
   song.loop();
 
