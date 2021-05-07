@@ -26,8 +26,9 @@ function setup() {
   Berry1 = loadImage("assets/berry1.png")
   // Berry2 = loadImage("assets/berry2.png")
 
-  song.play();
-  song.loop();
+  //TOOK THIS OUT
+  // song.play();
+  // song.loop();
 
   // Spawn an object
 

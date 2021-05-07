@@ -76,8 +76,8 @@ function setup() {
   Rocket = loadImage("assets/rocket2.png");
 
   // //Housekeeping
-  // imageMode(CENTER);
-  // rectMode(CENTER);
+  imageMode(CENTER);
+  rectMode(CENTER);
 
 }
 
@@ -88,7 +88,7 @@ function draw() {
     case 0:
       space();
       // text("HOME", 250, 250);
-      image(Home, windowWidth / 2 - 390, windowHeight / 2 - 570, 390, 570);
+      image(Home, windowWidth / 2, windowHeight / 2, 390, 570);
       //HOME IMG HERE
       break;
 
@@ -121,7 +121,7 @@ function draw() {
       //HOW TO
     case 4:
       space();
-      image(Howto, windowWidth / 2 - 390, windowHeight / 2 - 570, 390, 570);
+      image(Howto, windowWidth / 2, windowHeight / 2, 390, 570);
       // text("HOW TO", 250, 250);
       break;
   }
